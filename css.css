@@ -1,6 +1,7 @@
 
 
 * {
+    border: 1px solid pink;
     margin:0;
     padding:0;
 }
@@ -39,7 +40,7 @@ a:hover {
     margin-right:5%;
 }
 
-.image {
+.banner-image {
     overflow:hidden;
     display:flex; 
     justify-content:center;
@@ -48,21 +49,35 @@ a:hover {
 .images {
     opacity:.5;
     margin-top: 7%;
-    display: flex;
+    display: inline-flex;
     flex-direction:row;
-    justify-content: space-between;
+    
+    justify-content:space-evenly;
     transition:.5s;
 }
-
 .images:hover {
-    opacity:100;
+    opacity: 100;
 }
 
-.p {
+.image12 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image34 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagep {
+    display:block;
     width:20%;
     text-align:center;
     float:right;
     margin-top:10%;
+    margin-bottom:10%;
     margin-right:3%;
 }
 
@@ -88,3 +103,32 @@ button:hover {
     background-color:black;
     cursor:pointer;
 }
+
+/*Media Queries*/
+/*Tablet View*/
+@media (max-width:1000px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-image img {
+        
+        width:100%;
+    }
+
+    .images {
+        flex-wrap:wrap;
+    }
+
+    .imagep {
+        width:80%;
+        margin-bottom:20%;
+    }
+}
+
+
+
+
+/*Phone View*/
